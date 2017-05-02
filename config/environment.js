@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+    apiKey: 'AIzaSyDaNqQX3foTzVxGSBKXEaMlWDFN-Zb0G0E',
+    authDomain: 'idealist-ae31b.firebaseapp.com',
+    databaseURL: 'idealist-ae31b.firebaseio.com',
+    storageBucket: 'idealist-ae31b.appspot.com',
+  },
     modulePrefix: 'by-movies',
     environment: environment,
     rootURL: '/',

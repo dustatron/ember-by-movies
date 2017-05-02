@@ -1,0 +1,26 @@
+<h2>Movie Idea</h2>
+<ul class="post-publish">
+  <li>
+    {{input value=title placeholder="Title"}}
+  </li>
+  <li>
+    {{textarea value=link placeholder="link"}}
+  </li>
+  <li>
+    {{textarea value=body placeholder="Body"}}
+  </li>
+  <li>
+    <button {{action "publishPost"}}>Publish</button>
+  </li>
+</ul>
+<br>
+<h4>POSTS</h4>
+<section>
+{{#each model as |post|}}
+  <div>{{post.title}}</div>
+  <div>{{post.link}}</div>
+  <div>{{post.body}}</div>
+  <br>
+{{/each}}
+</section>
+{{outlet}}
