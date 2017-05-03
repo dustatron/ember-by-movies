@@ -2,9 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    voteUp: function (param) {
-      var movieVote = this.store.('post');
-      console.log("up vote " + movieVote);
+    voteUp: function (id) {
+      let movie = this.store.findRecord('post', id);
+      movie.then(function(post) {
+        // post.get('vote');
+        post.incrementProperty('vote');
+
+        post.save();
+      });
+
     }
   }
 });
