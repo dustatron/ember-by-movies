@@ -6,7 +6,8 @@
   <div>{{post.link}}</div>
   <div>{{post.body}}</div>
   <div>{{post.vote}}</div>
-  <button {{action 'voteUp' post.id}}>Upvote</button>
+  <button {{action 'voteUp' post.id}}>Up Vote</button>
+  <button {{action 'voteDown' post.id}}>Down Vote</button>
   <hr>
 {{/each}}
 </section>
