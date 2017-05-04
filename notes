@@ -1,0 +1,3 @@
+$ ember deploy production
+
+$ firebase open hosting:site

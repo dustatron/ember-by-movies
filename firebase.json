@@ -1,10 +1,14 @@
 {
   "hosting": {
-    "firebase": "my-ember-cli-app",
-    "public": "dist",
-    "rewrites": [{
-      "source": "**",
-      "destination": "/index.html"
-    }]
+    "public": "/dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }

@@ -1,16 +1,21 @@
-<h1>New Post</h1>
-<ul class="post-publish">
-  <li>
-    {{input value=title placeholder="Title"}}
-  </li>
-  <li>
-    {{textarea value=link placeholder="link"}}
-  </li>
-  <li>
-    {{textarea value=body placeholder="Body"}}
-  </li>
-  <li>
-    <button {{action "publishPost"}}>Publish</button>
-  </li>
-</ul>
+<div class="jumbotron">
+  <h2>Add A Trailer</h2>
+  
+  <ul class="post-publish">
+    <li>
+      {{input value=title placeholder="Title"}}
+    </li>
+    <li>
+      {{textarea value=link paceholder="link"}}
+    </li>
+    <li>
+      {{textarea value=body placeholder="Body"}}
+    </li>
+    <li>
+      {{#link-to 'posts'}}<button {{action "publishPost" }}>Publish</button>{{/link-to}}
+    </li>
+  </ul>
+
+</div>
+
 {{outlet}}

@@ -5,9 +5,10 @@ export default Ember.Controller.extend({
   sortAscending: false, // sorts post by timestamp
   actions: {
     publishPost: function() {
+      var ytId = this.get('link').split("v=")[1];
       var newPost = this.store.createRecord('post', {
         title: this.get('title'),
-        link: this.get('link'),
+        link: ytId,
         body: this.get('body'),
         vote: '0',
         timestamp: new Date().getTime()

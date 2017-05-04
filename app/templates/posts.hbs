@@ -1,14 +1,18 @@
-<h2>Movie List</h2>
+<div class="container">
 
-<section>
-{{#each model as |post|}}
-  <div>{{post.title}}</div>
-  <div>{{post.link}}</div>
-  <div>{{post.body}}</div>
-  <div>{{post.vote}}</div>
-  <button {{action 'voteUp' post.id}}>Up Vote</button>
-  <button {{action 'voteDown' post.id}}>Down Vote</button>
-  <hr>
-{{/each}}
-</section>
+    <section>
+    {{#each model as |post|}}
+      <div class="col-md-6">
+          <div><h3>{{post.title}}</h3> Vote Count: {{post.vote}}</div>
+          {{ember-youtube ytid=post.link}}
+          <div>{{post.body}}</div>
+          <button {{action 'voteUp' post.id}}>Up Vote</button>
+          <button {{action 'voteDown' post.id}}>Down Vote</button>
+      </div>
+    {{/each}}
+    </section>
+
+
+</div>
+
 {{outlet}}

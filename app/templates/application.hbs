@@ -1,8 +1,24 @@
-<h1>MCCORD'S BACK YARD MOVIES</h1>
+<!-- <h1>MCCORD'S BACK YARD MOVIES</h1>
 <br>
 <ul>
   <li>{{#link-to 'posts'}}posts{{/link-to}}</li>
   <li>{{#link-to 'newpost'}}Submit{{/link-to}}</li>
   <li>{{#link-to 'about'}}about{{/link-to}}</li>
-</ul>
+</ul> -->
+
+{{#bs-navbar type=(if inverse 'inverse') fluid=fluid as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}Backyard Movies{{/link-to}}
+  </div>
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.item}}{{#nav.link-to "newpost"}}Add Movie{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}{{#nav.link-to "about"}}About{{/nav.link-to}}{{/nav.item}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
+
+<div class="container">
 {{outlet}}
+</div>
