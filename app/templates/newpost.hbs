@@ -1,40 +1,24 @@
 <div class="jumbotron">
-  <h2>Add A Trailer</h2>
-
-  <ul class="post-publish">
-    <li>
-      {{input value=title placeholder="Title"}}
-    </li>
-    <li>
-      {{textarea value=link paceholder="link"}}
-    </li>
-    <li>
-      {{textarea value=body placeholder="Body"}}
-    </li>
-    <li>
-      {{#link-to 'posts'}}<button {{action "publishPost" }}>Publish</button>{{/link-to}}
-    </li>
-
-  </ul>
+  <h3>Add A Movie</h3>
+  {{input type="text" value=searchString action="getSearchData" placeholder="Search"}}
 
 </div>
 
 <div class="containter">
-  <h3>spit out jquery</h3>
-  {{input type="text" value=searchString action="getSearchData" placeholder="Search"}}
-  <ul>
-  {{#each model as |list|}}
-      <h3 value='title' >{{list.title}}</h3>
-      <p value='date'> {{list.release_date}}</p>
-      <p value='image'><img src="http://image.tmdb.org/t/p/w185/{{list.poster_path}}" alt=""></p>
-      <p value='overview'>{{list.overview}}</p>
-      <button {{action "pushMovie" list.id}}>Add Movie</button>
+  <div class="well">
+    {{#each model as |list|}}
+        <h3 class="title">{{list.title}}</h3>
+        <p class="date"> {{list.release_date}}</p>
+        <p class='image'><img src="http://image.tmdb.org/t/p/w185/{{list.poster_path}}" alt=""></p>
+        <p class='overview'>{{list.overview}}</p>
+        <button {{action "pushMovie" list.id}}>Add Movie</button>
 
-    <hr>
-    {{else}}
-      <li>No Results</li>
-  {{/each}}
-  </ul>
+      <hr>
+      {{else}}
+        <li>No Results</li>
+    {{/each}}
+  </div>
+
 </div>
 
 {{outlet}}
