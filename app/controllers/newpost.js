@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
     },
     getSearchData: function() {
     var searchValue =this.get('searchString');
-    var searchLink = "http://api.themoviedb.org/3/search/movie?api_key=749c2902bde6802d4268a80d0011ab0f&query=";
+    var searchLink = "https://api.themoviedb.org/3/search/movie?api_key=749c2902bde6802d4268a80d0011ab0f&query=";
     var searchString = searchLink+searchValue;
     var Controller = this;
     jQuery.getJSON(searchString).then(function(json) {
