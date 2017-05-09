@@ -6,6 +6,8 @@ export default DS.Model.extend({
   date: DS.attr('string'),
   image: DS.attr('string'),
   overview: DS.attr('string'),
+  tagline: DS.attr('string'),
   vote: DS.attr('number'),
-  timestamp: DS.attr('number')
+  timestamp: DS.attr('number'),
+  trailer: DS.attr('string')
 });

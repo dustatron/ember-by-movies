@@ -22,7 +22,6 @@ export default Ember.Controller.extend({
     var searchString = searchLink+searchValue;
     var Controller = this;
     jQuery.getJSON(searchString).then(function(json) {
-      console.log(json.results);
        Controller.set('model', json.results);
      });
    },
@@ -44,6 +43,8 @@ export default Ember.Controller.extend({
              date: json.release_date,
              image: json.poster_path,
              overview: json.overview,
+             tagline: json.tagline,
+             trailer: json.videos.results[0].key,
              vote: '0',
              timestamp: new Date().getTime()
            });

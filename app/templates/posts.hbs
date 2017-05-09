@@ -6,32 +6,35 @@
         <div class="well">
           <div class="row">
 
-            <div class="col-md-3 text-right">
-                <button {{action 'voteUp' post.id}}>Up Vote</button>
-            </div>
-            <div class="col-md-3 text-left">
-              <button {{action 'voteDown' post.id}}>Down Vote</button>
+            <div class="col-md-6 text-right">
+                <span class="vote-up" {{action 'voteUp' post.id}}><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                <span class="vote-down" {{action 'voteDown' post.id}}>
+                  <i class="fa fa-arrow-down" aria-hidden="true"></i></span>
             </div>
             <div class="col-md-6 text-right">
-              <p>Votes: {{post.vote}}</p>
+            <span class="vote-count"> <strong>Votes: {{post.vote}} </strong> </span>
             </div>
 
           </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="title">{{post.title}}</h3>
-          </div>
-        </div>
         <div class="row">
           <div class="col-md-5">
-              <p class='image'><img src="https://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></p>
+              <p class='poster'><img src="https://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></p>
           </div>
           <div class=" col-md-7">
 
-            <p class='overview'>{{post.overview}}</p>
-            <p class="date"> <strong>Release Date: {{post.date}}</strong></p>
+            <!-- <p class='overview'>{{post.overview}}</p> -->
+            <h3 class="title">{{post.title}}</h3>
 
+            <p>{{post.tagline}}</p>
+
+            <a href="https://www.youtube.com/watch?v={{post.trailer}}"><img src="/assets/images/YouTube-50.png" alt="">Trailer</a>
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <p><strong>Release Date: {{post.date}}</strong></p>
           </div>
 
         </div>
