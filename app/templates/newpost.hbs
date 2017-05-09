@@ -5,19 +5,19 @@
 </div>
 
 <div class="containter">
-  <div class="well">
+
     {{#each model as |list|}}
         <h3 class="title">{{list.title}}</h3>
         <p class="date"> {{list.release_date}}</p>
-        <p class='image'><img src="http://image.tmdb.org/t/p/w185/{{list.poster_path}}" alt=""></p>
+        <p class='image'><img src="https://image.tmdb.org/t/p/w185/{{list.poster_path}}" alt=""></p>
         <p class='overview'>{{list.overview}}</p>
-        <button {{action "pushMovie" list.id}}>Add Movie</button>
+      {{#link-to 'posts'}}  <button {{action "pushMovie" list.id}}>Add Movie</button> {{/link-to}}
 
       <hr>
       {{else}}
         <li>No Results</li>
     {{/each}}
-  </div>
+
 
 </div>
 

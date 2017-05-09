@@ -3,13 +3,40 @@
     <section>
     {{#each model as |post|}}
       <div class="col-md-6">
-        <h3 class="title">{{post.title}}</h3>
-        <p>Votes: {{post.vote}}</p>
-        <p class="date"> Release Date: {{post.date}}</p>
-        <p class='image'><img src="http://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></p>
-        <p class='overview'>{{post.overview}}</p>
-          <button {{action 'voteUp' post.id}}>Up Vote</button>
-          <button {{action 'voteDown' post.id}}>Down Vote</button>
+        <div class="well">
+          <div class="row">
+
+            <div class="col-md-3 text-right">
+                <button {{action 'voteUp' post.id}}>Up Vote</button>
+            </div>
+            <div class="col-md-3 text-left">
+              <button {{action 'voteDown' post.id}}>Down Vote</button>
+            </div>
+            <div class="col-md-6 text-right">
+              <p>Votes: {{post.vote}}</p>
+            </div>
+
+          </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title">{{post.title}}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+              <p class='image'><img src="https://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></p>
+          </div>
+          <div class=" col-md-7">
+
+            <p class='overview'>{{post.overview}}</p>
+            <p class="date"> <strong>Release Date: {{post.date}}</strong></p>
+
+          </div>
+
+        </div>
+
+        </div>
       </div>
     {{/each}}
     </section>
