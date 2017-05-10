@@ -1,57 +1,6 @@
 
 
-    <section>
-    {{#each model as |post|}}
-    <!-- ////////// MAIN BOX ///////// -->
-      <div class="col-md-3 boxy">
-        <div class="border">
-
-        <!-- ///////// TOP ROW -->
-          <div class="row no-marg">
-            <div class="col-md-5 col-xs-5 no-marg v-box">
-              <!-- /// UP VOTE /// -->
-                  <span class="vote-up" {{action 'voteUp' post.id}}>
-                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                  </span>
-            </div>
-
-
-              <!-- /// DOWN VOTE /// -->
-              <div class="col-md-5 col-xs-5 no-marg v-box down">
-                  <span class="vote-down" {{action 'voteDown' post.id}}>
-                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                  </span>
-            </div>
-            <div class="col-md-2 col-xs-2 vote-box">
-              <span class="vote-number">
-                <strong>{{post.vote}} </strong>
-              </span>
-            </div>
-          </div><!--/// END TOP ROW-->
-        <!-- ////////// SECOND ROW -->
-          <div class="row">
-            <!-- /// POSTER /// -->
-            <div class="col-md-12 no-float poster-box">
-              <a class="play-button" href="https://www.youtube.com/watch?v={{post.trailer}}">
-                <img class="play-image" src="/assets/images/Circled Play-40.png" alt="">
-              </a>
-              <span><img class='poster' src="https://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></span>
-            </div>
-          </div><!--/// END SECOND ROW-->
-          <!-- ///////// THIRD ROW -->
-          <div class="row bottom-row">
-            <!-- /// Title /// -->
-            <div class="col-md-12 bottom-row">
-              <p class="title">{{post.title}}</p>
-            </div>
-
-          </div>
-        </div>
-
-
-      </div><!--/// END OF BOXY-->
-    {{/each}}
-    </section>
+  
 
 
 

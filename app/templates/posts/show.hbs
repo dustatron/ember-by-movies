@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+
+
+<!-- ///////// FIRST ROW ////////// -->
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{model.title}}</h1>
+    </div>
+  </div>
+
+<!-- ////////// SECOND ROW ////////// -->
+
+  <div class="row">
+    <div class="col-md-4 col-xs-10 poster-box">
+      <img class='poster' src="https://image.tmdb.org/t/p/w185/{{model.image}}" alt="">
+    </div>
+    <div class="col-md-4 col-xs-10">
+      <div class="row">
+        <span class="video-player">{{ember-youtube class="video-player" ytid=model.trailer}}</span>
+
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <h4> VOTES : {{model.vote}}</h4>
+
+        </div>
+        <div class="col-md-7">
+          <h5>Release Date:  {{model.date}}</h5>
+        </div>
+
+      </div>
+      <hr>
+        <div class="row">
+          <div class="col-md-12">
+            {{model.overview}}
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+<!-- ////////// THIRD ROW ////////// -->
+<div class="row">
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
+
+
+
+
+{{outlet}}
