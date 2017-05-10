@@ -1,10 +1,17 @@
-<div class="jumbotron">
-  <h3>Add A Movie</h3>
-  {{input type="text" value=searchString action="getSearchData" placeholder="Search"}}
 
-</div>
 
-<div class="containter">
+  <div id="search" class="row">
+
+    {{input type="text" value=searchString action="getSearchData" placeholder="Search For a Movie"}} <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+
+  </div>
+
+
+
+
+
+
+<div class="row">
 
     {{#each model as |list|}}
         <h3 class="title">{{list.title}}</h3>
@@ -17,6 +24,7 @@
       {{else}}
         <li>No Results</li>
     {{/each}}
+
 
 
 </div>

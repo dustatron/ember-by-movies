@@ -1,15 +1,28 @@
-<div class="container main-box">
+
 
     <section>
     {{#each model as |post|}}
-      <div class="col-md-3 movie-box">
-        <div class="well">
+    <!-- ////////// MAIN BOX ///////// -->
+      <div class="col-md-3 boxy">
+        <div class="border">
+
         <!-- ///////// TOP ROW -->
-          <div class="row">
-            <div class="col-md-10 col-xs-9">
-              <p class="title">{{post.title}}</p>
+          <div class="row no-marg">
+            <div class="col-md-5 col-xs-5 no-marg v-box">
+              <!-- /// UP VOTE /// -->
+                  <span class="vote-up" {{action 'voteUp' post.id}}>
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                  </span>
             </div>
-            <div class="col-md-2 col-xs-3 vote-box">
+
+
+              <!-- /// DOWN VOTE /// -->
+              <div class="col-md-5 col-xs-5 no-marg v-box down">
+                  <span class="vote-down" {{action 'voteDown' post.id}}>
+                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                  </span>
+            </div>
+            <div class="col-md-2 col-xs-2 vote-box">
               <span class="vote-number">
                 <strong>{{post.vote}} </strong>
               </span>
@@ -27,32 +40,19 @@
           </div><!--/// END SECOND ROW-->
           <!-- ///////// THIRD ROW -->
           <div class="row bottom-row">
-            <!-- /// VOTING /// -->
-
-              <!-- /// UP VOTE /// -->
-
-                <div class="col-md-6 col-xs-6 col">
-                  <span class="vote-up" {{action 'voteUp' post.id}}>
-                    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-                  </span>
-                </div>
-
-              <!-- /// DOWN VOTE /// -->
-
-                <div class="col-md-6 col-xs-6 col">
-                  <span class="vote-down" {{action 'voteDown' post.id}}>
-                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-                  </span>
-                </div>
+            <!-- /// Title /// -->
+            <div class="col-md-12 bottom-row">
+              <p class="title">{{post.title}}</p>
+            </div>
 
           </div>
+        </div>
 
-        </div> <!--/// END WELL-->
 
-      </div><!--/// END OF BOX-->
+      </div><!--/// END OF BOXY-->
     {{/each}}
     </section>
 
-</div><!--/// END CONTAINTER -->
+
 
 {{outlet}}
