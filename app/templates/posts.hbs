@@ -1,50 +1,58 @@
-<div class="container">
+<div class="container main-box">
 
     <section>
     {{#each model as |post|}}
-      <div class="col-md-6">
+      <div class="col-md-3 movie-box">
         <div class="well">
+        <!-- ///////// TOP ROW -->
           <div class="row">
-
-            <div class="col-md-6 text-right">
-                <span class="vote-up" {{action 'voteUp' post.id}}><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
-                <span class="vote-down" {{action 'voteDown' post.id}}>
-                  <i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+            <div class="col-md-10 col-xs-9">
+              <p class="title">{{post.title}}</p>
             </div>
-            <div class="col-md-6 text-right">
-            <span class="vote-count"> <strong>Votes: {{post.vote}} </strong> </span>
+            <div class="col-md-2 col-xs-3 vote-box">
+              <span class="vote-number">
+                <strong>{{post.vote}} </strong>
+              </span>
             </div>
+          </div><!--/// END TOP ROW-->
+        <!-- ////////// SECOND ROW -->
+          <div class="row">
+            <!-- /// POSTER /// -->
+            <div class="col-md-12 no-float poster-box">
+              <a class="play-button" href="https://www.youtube.com/watch?v={{post.trailer}}">
+                <img class="play-image" src="/assets/images/Circled Play-40.png" alt="">
+              </a>
+              <span><img class='poster' src="https://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></span>
+            </div>
+          </div><!--/// END SECOND ROW-->
+          <!-- ///////// THIRD ROW -->
+          <div class="row bottom-row">
+            <!-- /// VOTING /// -->
+
+              <!-- /// UP VOTE /// -->
+
+                <div class="col-md-6 col-xs-6 col">
+                  <span class="vote-up" {{action 'voteUp' post.id}}>
+                    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+              <!-- /// DOWN VOTE /// -->
+
+                <div class="col-md-6 col-xs-6 col">
+                  <span class="vote-down" {{action 'voteDown' post.id}}>
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                  </span>
+                </div>
 
           </div>
-        <div class="row">
-          <div class="col-md-5">
-              <p class='poster'><img src="https://image.tmdb.org/t/p/w185/{{post.image}}" alt=""></p>
-          </div>
-          <div class=" col-md-7">
 
-            <!-- <p class='overview'>{{post.overview}}</p> -->
-            <h3 class="title">{{post.title}}</h3>
+        </div> <!--/// END WELL-->
 
-            <p>{{post.tagline}}</p>
-
-            <a href="https://www.youtube.com/watch?v={{post.trailer}}"><img src="/assets/images/YouTube-50.png" alt="">Trailer</a>
-
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-              <p><strong>Release Date: {{post.date}}</strong></p>
-          </div>
-
-        </div>
-
-        </div>
-      </div>
+      </div><!--/// END OF BOX-->
     {{/each}}
     </section>
 
-
-</div>
+</div><!--/// END CONTAINTER -->
 
 {{outlet}}

@@ -1,7 +1,9 @@
-/*div{
+
+/*
+div{
   border: 1px solid red;
 }*/
-.video-player{
+/*.video-player{
   position:relative;
 	padding-bottom:56.25%;
 	padding-top:30px;
@@ -15,71 +17,99 @@
 	left:0;
 	width:100%;
 	height:100%;
+}*/
+
+img {
+  display:
+
 }
 
-.vote-count{
+.main-box{
+  margin: 0;
+  padding: 0;
+}
+.movie-box{
+  margin: 0;
+  padding: 0;
+}
+
+.well{
+ margin: .3em .2em;
+ padding: 1px 4px 5px 5px;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+.col{
+  padding: 0;
+  /*margin: 0;*/
+  text-align: center;
+}
+
+.title{
+  font-weight: bold;
+  font-kerning: auto;
+  font-size: 1.1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+white-space: nowrap;
+
+}
+
+.vote-box{
+  color: white;
   border: 1px solid grey;
-  padding: 10px 15px;
-  background-color: #afdfff;
+  padding: 2px 15px;
+  background-color: #4c5663;
+}
+
+.vote-number{
+  text-align: center;
+}
+
+.play-button{
+  position: absolute;
+  top: 12em;
+  left: 40%;
+  opacity: .5;
+}
+
+.play-image{
+  height: 4em;
+}
+
+.bottom-row{
+  align-items: center;
+  margin-right: .6em
+}
+.vote-up{
+  color: white;
+  margin: 0;
+  padding: 0% 50%;
+  background-color: #4298f4;
+  cursor: pointer;
+  user-select: none;
+
 }
 
 .vote-down{
-  position:absolute;
-  top:0%;
-  left:45%;
-  padding: .05em 3em;
-  margin: .05em;
   color: white;
-  background-color: #ff4c4c;
+  margin: 0;
+  padding: 0% 50%;
+  background-color: #fc5f5f;
   cursor: pointer;
   user-select: none;
-  border-radius: .5em;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-.vote-up img{
-  width: 6%;
 }
 
-.vote-down img {
-  width: 5%;
-}
-
-.vote-up{
-  position:absolute;
-  top:0%;
-  left:5%;
-  padding: .05em 3em;
-  margin-bottom: 10px;
-  color: white;
-  background-color: #4a8ef9;
-  cursor: pointer;
-  user-select: none;
-  border-radius: .5em;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-
-.vote-down:hover {
-	background:#9c89f6;
-	box-shadow:0px 4px #6b54d3;
-}
-
-.vote-up:hover {
-	background:#9c89f6;
-	box-shadow:0px 4px #6b54d3;
-}
-
-.vote-up:active{
-  top: 3px;
-	box-shadow: 0px 0px #d3545d;
-}
-
-.vote-down:active{
-  top: 3px;
-	box-shadow: 0px 0px #d3545d;
+.poster-box{
+  padding: 0;
+  margin: 0;
 }
 
 .poster{
-  margin-top: 10px;
+  width: 100%;
+  height: auto;
 }
