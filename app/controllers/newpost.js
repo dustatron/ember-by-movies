@@ -29,7 +29,6 @@ export default Ember.Controller.extend({
      var linkRange = "https://api.themoviedb.org/3/movie/"
      var keys = '?api_key=749c2902bde6802d4268a80d0011ab0f&append_to_response=videos'
      var movieLink = linkRange+callback+keys;
-     var jData;
      var that = this;
 
      let getMovie = function(callback) {
@@ -52,22 +51,6 @@ export default Ember.Controller.extend({
            newMovie.save();
 
      });
-
-
-
-
-
-
-
-    //  var theMovie = jQuery.getJSON(movieLink).then(function(json) {
-    //    jData = json;
-     //
-    //  });
-
-    // var movie = jQuery.getJSON(movieLink).then(function(json) {
-    //   make(json);
-    //
-    // })
 
  }//actions,
  }
