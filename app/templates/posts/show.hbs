@@ -17,21 +17,22 @@
 <!-- ////////// SECOND ROW ////////// -->
 
   <div class="row">
-    <div class="col-md-4 col-xs-10 poster-box">
+    <div class="col-md-3 col-xs-12 poster-box">
       <img class='poster' src="https://image.tmdb.org/t/p/w185/{{model.image}}" alt="">
     </div>
-    <div class="col-md-4 col-xs-10">
+    <div class="col-md-6 col-xs-12">
       <div class="row">
         <span class="video-player">{{ember-youtube class="video-player" ytid=model.trailer}}</span>
 
       </div>
       <div class="row">
         <div class="col-md-5">
-          <h4> VOTES : {{model.vote}}</h4>
+          <h5>Release Date:  {{model.date}}</h5>
 
         </div>
         <div class="col-md-7">
-          <h5>Release Date:  {{model.date}}</h5>
+          <h4> VOTES : {{model.vote}}</h4>
+
         </div>
 
       </div>
@@ -53,11 +54,10 @@
   <div class="col-md-4">
 
   </div>
-  <div class="col-md-4">
-
+  <div class="col-md-4 col-xs-12 text-center padded">
+  {{#link-to 'posts'}}  <span class="delete" {{action 'deletePost' model.id}}>DELETE <i class="fa fa-trash" aria-hidden="true"></i></span>{{/link-to}}
   </div>
 </div>
-
 
 
 
