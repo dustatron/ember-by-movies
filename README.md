@@ -1,3 +1,6 @@
+This tool is a simple app that lets users search for a movie and then ad it to the que to be voted on.
+example link here http://tinyurl.com/mccordyard.
+
 # by-movies
 
 This README outlines the details of collaborating on this Ember application.
