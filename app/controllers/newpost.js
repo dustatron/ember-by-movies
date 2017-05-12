@@ -44,6 +44,9 @@ export default Ember.Controller.extend({
              overview: json.overview,
              tagline: json.tagline,
              trailer: json.videos.results[0].key,
+             runTime: json.runtime,
+             imdb: json.imdb_id,
+             revenue: json.revenue,
              vote: '0',
              timestamp: new Date().getTime()
            });

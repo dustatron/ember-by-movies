@@ -22,11 +22,14 @@
 
       </div>
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-5">
           <h4><strong>Release Date:  {{model.date}}</strong></h4>
 
         </div>
-        <div class="col-md-5 text-right">
+        <div class="col-md-5">
+          <h4>Run Time : {{model.runTime}}  ||  <a href="http://www.imdb.com/title/{{model.imdb}}"> IMDB</a></h4>
+        </div>
+        <div class="col-md-2 text-right">
           <h4> VOTES : {{model.vote}}</h4>
 
         </div>
@@ -36,6 +39,7 @@
         <div class="row">
           <div class="col-md-12">
             {{model.overview}}
+
 
           </div>
         </div>
@@ -50,10 +54,11 @@
   <div class="col-md-4 padded text-left">
     {{#link-to 'posts'}}  <span class="delete" {{action 'deletePost' model.id}}> <i class="fa fa-trash" aria-hidden="true"></i></span>{{/link-to}}
     </div>
-  </div>
-  <div class="col-md-4">
+    <div class="col-md-7 text-right">
 
+    </div>
   </div>
+
   <div class="col-md-4 col-xs-12 text-right padded">
 
 </div>

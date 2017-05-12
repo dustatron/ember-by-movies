@@ -7,6 +7,9 @@ export default DS.Model.extend({
   overview: DS.attr('string'),
   tagline: DS.attr('string'),
   vote: DS.attr('number'),
+  runTime: DS.attr('string'),
+  imdb: DS.attr('string'),
+  revenue: DS.attr('string'),
+  trailer: DS.attr('string'),
   timestamp: DS.attr('number'),
-  trailer: DS.attr('string')
 });
