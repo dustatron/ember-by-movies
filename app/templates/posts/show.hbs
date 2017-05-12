@@ -47,15 +47,15 @@
 
 <!-- ////////// THIRD ROW ////////// -->
 <div class="row add-row">
-  <div class="col-md-4">
-
+  <div class="col-md-4 padded text-left">
+    {{#link-to 'posts'}}  <span class="delete" {{action 'deletePost' model.id}}> <i class="fa fa-trash" aria-hidden="true"></i></span>{{/link-to}}
+    </div>
   </div>
   <div class="col-md-4">
 
   </div>
   <div class="col-md-4 col-xs-12 text-right padded">
-  {{#link-to 'posts'}}  <span class="delete" {{action 'deletePost' model.id}}> <i class="fa fa-trash" aria-hidden="true"></i></span>{{/link-to}}
-  </div>
+
 </div>
 
 
